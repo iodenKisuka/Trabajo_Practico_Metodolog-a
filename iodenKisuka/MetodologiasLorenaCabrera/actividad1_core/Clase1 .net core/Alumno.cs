@@ -8,12 +8,12 @@ namespace Clase1_.net_core
     {
         int legajo;
         int promedio;
-        public int getLegajo
+        public int GetLegajo
         {
             get { return legajo; }
             set { legajo = value; }
         }
-        public int getPromedio
+        public int GetPromedio
         {
             get { return promedio; }
             set { promedio = value; }
@@ -24,23 +24,40 @@ namespace Clase1_.net_core
             this.legajo = l;
             this.promedio = p;
         }
-
+        public Alumno() { }
 
         public override string ToString()
         {
-            return base.ToString()+" legajo "+ this.legajo;
+            return base.ToString() + " legajo " + this.legajo;
         }
 
-       /** public override bool SosMayor(IComparableP variable)
+        /** public override bool SosMayor(IComparableP variable)
+         {
+             return this.legajo < ((Alumno)variable).legajo;
+         }
+
+         public override bool SosMenor(IComparableP variable)
+         {
+             return this.legajo < ((Alumno)variable).legajo;
+         } **/
+
+       public IEstrategia_Comparar_Alumno Estrategia_elegida{ get; set; }
+        
+        //delegar las acciones
+        public void Comparar_Alumnos(string tipo_de_dato)
         {
-            return this.legajo < ((Alumno)variable).legajo;
+            try
+            {
+                int numero = int.Parse(tipo_de_dato);
+                Estrategia_elegida.Comparar_Alumno(numero);
+            }
+            catch (InvalidCastException)
+            {
+               Estrategia_elegida.Comparar_Alumno(tipo_de_dato);
+            }
+
+
         }
-
-        public override bool SosMenor(IComparableP variable)
-        {
-            return this.legajo < ((Alumno)variable).legajo;
-        } **/
-
 
 
     }

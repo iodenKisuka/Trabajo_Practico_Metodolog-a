@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    class Cola: IColeccionableTP
+    class Cola: IColeccionableTP,ITERABLE
     {
         private Queue<IComparableP> colas = new Queue<IComparableP>();
 
@@ -87,6 +87,26 @@ namespace Clase1_.net_core
             }
 
             return cola_copia;
+        }
+
+        public void primero()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void siguiente()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool fin()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITERABLE actual()
+        {
+            throw new NotImplementedException();
         }
         //EJERCICIO  5
         /** public void Llenar(IColeccionableTP coleccionable)

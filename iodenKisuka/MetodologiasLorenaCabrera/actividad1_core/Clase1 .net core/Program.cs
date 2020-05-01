@@ -41,13 +41,13 @@ namespace Clase1_.net_core
             Informar(multiple2);    **/
 
             //Ejercicio 17
-            Console.WriteLine("Datos de la COLECCION");
-            IColeccionableTP pila4 = new Pila();
-            IColeccionableTP cola4 = new Cola();
-            ColeccionMultiple multiple3 = new ColeccionMultiple(pila4, cola4);
-            LlenarAlumnos(multiple3.pila_colecion);
-            LlenarAlumnos(multiple3.cola_coleccion);
-            Informar(multiple3);
+            //Console.WriteLine("Datos de la COLECCION");
+            //IColeccionableTP pila4 = new Pila();
+            //IColeccionableTP cola4 = new Cola();
+            //ColeccionMultiple multiple3 = new ColeccionMultiple(pila4, cola4);
+            //LlenarAlumnos(multiple3.pila_colecion);
+            //LlenarAlumnos(multiple3.cola_coleccion);
+            //Informar(multiple3);
 
 
             // Console.WriteLine("Hello World!");
@@ -84,7 +84,7 @@ namespace Clase1_.net_core
                 int num = int.Parse(Console.ReadLine());
 
               //  IComparableP compara = new Numero(num);
-                sub_programa_informar(coleccionable,num);
+                Sub_programa_informar(coleccionable,num);
                 
                 // IComparableP compara = new Persona("",num) ;
                // IComparableP compara;
@@ -104,7 +104,7 @@ namespace Clase1_.net_core
         }
 
         //sub_programa
-        public static void sub_programa_informar(IColeccionableTP coleccionable, int num) {
+        public static void Sub_programa_informar(IColeccionableTP coleccionable, int num) {
             bool saber_si_ando=false;
             try
             {
@@ -113,12 +113,15 @@ namespace Clase1_.net_core
             } catch (Exception) {
                 try
                 {
-                    IComparableP compara = new Persona("", num);
-                    saber_si_ando = coleccionable.Contiene(compara);
+                    IComparableP compara = new Alumno("", num, num, num);
+                    //saber_si_ando = coleccionable.Contiene(compara);
+                    //ejercici practica 2 probando si funciona
+                    //Aplicando_Estrategia_Comparar_Alumno_Ejercicio2_practica2();
+                   
                 }
                 catch (Exception)
                 {
-                    IComparableP compara = new Alumno("", num, num, num);
+                    IComparableP compara = new Persona("", num);
                     saber_si_ando = coleccionable.Contiene(compara);
                 }
                 }
@@ -146,12 +149,12 @@ namespace Clase1_.net_core
             {
                 Random aleatorio = new Random();
                 //string nombre_al_azar = Path.GetRandomFileName();
-                IComparableP comp = new Persona(nombre_al_azar(), aleatorio.Next(10000000, 99999999));
+                IComparableP comp = new Persona(Nombre_al_azar(), aleatorio.Next(10000000, 99999999));
                 coleccionable.Agregar(comp);
             }
 
         }
-        public static string nombre_al_azar()
+        public static string Nombre_al_azar()
         {
             //string texto_aleatorio = "";
             List<string> nombres = new List<string> { "JUAN", "JOSÉ LUIS", "JOSÉ", "MARÍA GUADALUPE", "FRANCISCO", "GUADALUPE", "MARÍA", "JUANA", "ANTONIO", "JESÚS", "MIGUEL ÁNGEL", "PEDRO", "ALEJANDRO", "MANUEL", "MARGARITA", "MARÍA DEL CARMEN", "JUAN CARLOS", "ROBERTO", "FERNANDO", "DANIEL", "CARLOS", "JORGE", "RICARDO", "MIGUEL", "EDUARDO", "JAVIER", "RAFAEL", "MARTÍN", "RAÚL", "DAVID", "JOSEFINA", "JOSÉ ANTO" };
@@ -163,16 +166,28 @@ namespace Clase1_.net_core
 
         public static void LlenarAlumnos(IColeccionableTP coleccionable)
         {
-            for (int L = 0; L < 20; L++)
-            {
-                Random aleatorio = new Random();
+            //List<IEstrategia_Comparar_Alumno> Lista_Estrategia_Comparar_Alumno = new List<IEstrategia_Comparar_Alumno>() { new Comparar_Alumno_Nombre(), new Comparar_Alumno_Dni(), new Comparar_Alumno_Promedio(), new Comparar_Alumno_Legajo() };
+            ////miLista.Add();
+            //for (int L = 0; L < 20; L++)
+            //{
+            //    Random aleatorio = new Random();
                 
-                IComparableP compA = new Alumno(nombre_al_azar(), aleatorio.Next(10000000, 99999999), aleatorio.Next(100, 99999), aleatorio.Next(1, 10));
-                coleccionable.Agregar(compA);
-            }
+            //    IComparableP compA = new Alumno(Nombre_al_azar(), aleatorio.Next(10000000, 99999999), aleatorio.Next(100, 99999), aleatorio.Next(1, 10));
+            //    coleccionable.Agregar(compA);
+
+
+            //}
        
         }
-
+        //public static void Aplicando_Estrategia_Comparar_Alumno_Ejercicio2_practica2() {
+        //    //Ejercicio 2 Practica 2
+        //    Random aleatorio = new Random();
+        //    List<IEstrategia_Comparar_Alumno> Lista_Estrategia_Comparar_Alumno = new List<IEstrategia_Comparar_Alumno>() { new Comparar_Alumno_Nombre(), new Comparar_Alumno_Dni(), new Comparar_Alumno_Promedio(), new Comparar_Alumno_Legajo() };
+            
+        //    IEstrategia_Comparar_Alumno estrategia = Lista_Estrategia_Comparar_Alumno[aleatorio.Next(4)];
+        //    Alumno alumno_A = new Alumno();
+        //    alumno_A.Estrategia_elegida = estrategia;
+        //}
 
 
     }

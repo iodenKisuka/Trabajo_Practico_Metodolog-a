@@ -6,8 +6,14 @@ namespace Clase1_.net_core
 {
     class Numero:IComparableP
     {
-        public Numero(int valor) { this.Valor = valor; }
-        public Numero(){ }
+        public Numero(int valor) 
+        { 
+            this.Valor = valor;
+        }
+        public Numero()
+        { 
+        
+        }
         public int Valor { get; set; }
 
         public bool SosIgual(IComparableP variable)

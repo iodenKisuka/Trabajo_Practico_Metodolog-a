@@ -16,12 +16,12 @@ namespace Clase1_.net_core
             this.dni = d;
         }
         public Persona() { }
-        public string getNombre
+        public string GetNombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
-        public int getDni
+        public int GetDni
         {
             get { return dni; }
             set { dni = value; }
