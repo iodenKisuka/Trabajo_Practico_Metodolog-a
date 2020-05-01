@@ -56,8 +56,6 @@ namespace Clase1_.net_core
             // Console.WriteLine("Hello World!");
 
 
-
-
         }
 
         //EJERCICIO  5
