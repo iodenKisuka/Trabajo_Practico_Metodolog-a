@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    class Persona: IComparableP
+    class Persona : IComparableP
     {
         string nombre;
         int dni;
@@ -30,7 +30,7 @@ namespace Clase1_.net_core
         public bool SosIgual(IComparableP variable)
         {
 
-           Persona per =(Persona)variable;
+            Persona per = (Persona)variable;
             // IComparableP p = new Persona(nombre , dni);
             //ColeccionMultiple cole= (ColeccionMultiple)variable;
             // return cole.cola_coleccion.Contiene(p) || cole.pila_colecion.Contiene(p);
@@ -38,9 +38,9 @@ namespace Clase1_.net_core
             // IComparableP p = new Persona(this.nombre , this.dni);
             //ColeccionMultiple cole= (ColeccionMultiple)variable;
             //return cole.Contiene(p) ;
-           //Persona pers = new Persona(this.nombre, this.dni);
-            
-            return per.dni==this.dni;
+            //Persona pers = new Persona(this.nombre, this.dni);
+
+            return per.dni == this.dni;
 
 
             //throw new NotImplementedException();
@@ -60,7 +60,7 @@ namespace Clase1_.net_core
         public override string ToString()
         {
             //return base.ToString();
-           return "nombre "+this.nombre+" dni "+this.dni;
+            return "nombre " + this.nombre + " dni " + this.dni;
         }
 
     }

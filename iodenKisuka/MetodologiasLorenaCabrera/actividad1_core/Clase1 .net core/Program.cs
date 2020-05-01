@@ -8,37 +8,40 @@ namespace Clase1_.net_core
     {
         static void Main(string[] args)
         {
-           /** //Ejercicio 7
-            Console.WriteLine("iniciando programa");
-            IColeccionableTP pila = new Pila();
-            IColeccionableTP cola = new Cola();
-            Llenar(pila);
-            Console.WriteLine("ingreso a llenar pila");
-            Llenar(cola);
-            Informar(pila);
-            Console.WriteLine("Datos de la Cola");
-            Informar(cola);
 
-            //Ejercicio 8
-            Console.WriteLine("Datos de la COLECCION");
-            IColeccionableTP pila2 = new Pila();
-            IColeccionableTP cola2 = new Cola();
-            ColeccionMultiple multiple = new ColeccionMultiple(pila2, cola2);
-            Llenar(multiple.pila_colecion);
-            Llenar(multiple.cola_coleccion);
+            ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
+            // estrategiaalimno.SosIgual();
+            /** //Ejercicio 7
+             Console.WriteLine("iniciando programa");
+             IColeccionableTP pila = new Pila();
+             IColeccionableTP cola = new Cola();
+             Llenar(pila);
+             Console.WriteLine("ingreso a llenar pila");
+             Llenar(cola);
+             Informar(pila);
+             Console.WriteLine("Datos de la Cola");
+             Informar(cola);
+
+             //Ejercicio 8
+             Console.WriteLine("Datos de la COLECCION");
+             IColeccionableTP pila2 = new Pila();
+             IColeccionableTP cola2 = new Cola();
+             ColeccionMultiple multiple = new ColeccionMultiple(pila2, cola2);
+             Llenar(multiple.pila_colecion);
+             Llenar(multiple.cola_coleccion);
 
 
-            Console.WriteLine("Datos entrando a COLECCION");
-            Informar(multiple); **/
+             Console.WriteLine("Datos entrando a COLECCION");
+             Informar(multiple); **/
 
-         /*   //Ejercicio 13
-            Console.WriteLine("Datos de la COLECCION");
-            IColeccionableTP pila3 = new Pila();
-            IColeccionableTP cola3 = new Cola();
-            ColeccionMultiple multiple2 = new ColeccionMultiple(pila3, cola3);
-            LlenarPersonas(multiple2.pila_colecion);
-            LlenarPersonas(multiple2.cola_coleccion);
-            Informar(multiple2);    **/
+            /*   //Ejercicio 13
+               Console.WriteLine("Datos de la COLECCION");
+               IColeccionableTP pila3 = new Pila();
+               IColeccionableTP cola3 = new Cola();
+               ColeccionMultiple multiple2 = new ColeccionMultiple(pila3, cola3);
+               LlenarPersonas(multiple2.pila_colecion);
+               LlenarPersonas(multiple2.cola_coleccion);
+               Informar(multiple2);    **/
 
             //Ejercicio 17
             //Console.WriteLine("Datos de la COLECCION");
@@ -58,10 +61,10 @@ namespace Clase1_.net_core
         }
 
         //EJERCICIO  5
-       public static void Llenar(IColeccionableTP coleccionable)
+        public static void Llenar(IColeccionableTP coleccionable)
         {
             Random rnd = new Random();
-            
+
             for (int x = 1; x <= 20; x++)
             {
                 int valor_elegido_al_azar = rnd.Next(0, 100);
@@ -69,62 +72,66 @@ namespace Clase1_.net_core
                 //IColeccionableTP coleccionable = new Pila();
                 coleccionable.Agregar(comparable);
             }
-           
+
         }
 
         //EJERCICIO 6
         public static void Informar(IColeccionableTP coleccionable)
         {
             Console.WriteLine("Cantidad " + coleccionable.Cuantos());
-            if (coleccionable.Cuantos()>0) {
-               // Console.WriteLine("Minimo " + ((Numero)(coleccionable.Minimo())).Valor);
+            if (coleccionable.Cuantos() > 0)
+            {
+                // Console.WriteLine("Minimo " + ((Numero)(coleccionable.Minimo())).Valor);
                 Console.WriteLine("Minimo " + coleccionable.Minimo());
                 Console.WriteLine("Maximo " + coleccionable.Maximo());
                 Console.WriteLine("Ingrese un numero que quiere buscar");
                 int num = int.Parse(Console.ReadLine());
 
-              //  IComparableP compara = new Numero(num);
-                Sub_programa_informar(coleccionable,num);
-                
+                //  IComparableP compara = new Numero(num);
+                Sub_programa_informar(coleccionable, num);
+
                 // IComparableP compara = new Persona("",num) ;
-               // IComparableP compara;
+                // IComparableP compara;
 
 
-              /*  if (coleccionable.Contiene(compara))
-                {
-                    Console.WriteLine("El elemento leído está en la colección");
-                }
-                else
-                {
-                    Console.WriteLine("El elemento leído NO está en la colección");
-                */
+                /*  if (coleccionable.Contiene(compara))
+                  {
+                      Console.WriteLine("El elemento leído está en la colección");
+                  }
+                  else
+                  {
+                      Console.WriteLine("El elemento leído NO está en la colección");
+                  */
             }
             Console.WriteLine(" ");
 
         }
 
         //sub_programa
-        public static void Sub_programa_informar(IColeccionableTP coleccionable, int num) {
-            bool saber_si_ando=false;
+        public static void Sub_programa_informar(IColeccionableTP coleccionable, int num)
+        {
+            bool saber_si_ando = false;
             try
             {
                 IComparableP compara = new Numero(num);
                 saber_si_ando = coleccionable.Contiene(compara);
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 try
                 {
                     IComparableP compara = new Alumno("", num, num, num);
                     //saber_si_ando = coleccionable.Contiene(compara);
                     //ejercici practica 2 probando si funciona
                     //Aplicando_Estrategia_Comparar_Alumno_Ejercicio2_practica2();
-                   
+
                 }
                 catch (Exception)
                 {
                     IComparableP compara = new Persona("", num);
                     saber_si_ando = coleccionable.Contiene(compara);
                 }
-                }
+            }
             finally
             {
                 if (saber_si_ando)
@@ -136,13 +143,10 @@ namespace Clase1_.net_core
                     Console.WriteLine("El elemento leído NO está en la colección");
                 }
             }
-           
+
         }
 
-
-
-        // Ejercicio 12
-       
+       // Ejercicio 12
         public static void LlenarPersonas(IColeccionableTP coleccionable)
         {
             for (int L = 0; L < 20; L++)
@@ -152,43 +156,35 @@ namespace Clase1_.net_core
                 IComparableP comp = new Persona(Nombre_al_azar(), aleatorio.Next(10000000, 99999999));
                 coleccionable.Agregar(comp);
             }
-
         }
         public static string Nombre_al_azar()
         {
             //string texto_aleatorio = "";
             List<string> nombres = new List<string> { "JUAN", "JOSÉ LUIS", "JOSÉ", "MARÍA GUADALUPE", "FRANCISCO", "GUADALUPE", "MARÍA", "JUANA", "ANTONIO", "JESÚS", "MIGUEL ÁNGEL", "PEDRO", "ALEJANDRO", "MANUEL", "MARGARITA", "MARÍA DEL CARMEN", "JUAN CARLOS", "ROBERTO", "FERNANDO", "DANIEL", "CARLOS", "JORGE", "RICARDO", "MIGUEL", "EDUARDO", "JAVIER", "RAFAEL", "MARTÍN", "RAÚL", "DAVID", "JOSEFINA", "JOSÉ ANTO" };
             Random aleatorio = new Random();
-            int cantidad = nombres.Count-1;
+            int cantidad = nombres.Count - 1;
 
-            return nombres[aleatorio.Next(0,cantidad)];
+            return nombres[aleatorio.Next(0, cantidad)];
         }
-
         public static void LlenarAlumnos(IColeccionableTP coleccionable)
         {
-            //List<IEstrategia_Comparar_Alumno> Lista_Estrategia_Comparar_Alumno = new List<IEstrategia_Comparar_Alumno>() { new Comparar_Alumno_Nombre(), new Comparar_Alumno_Dni(), new Comparar_Alumno_Promedio(), new Comparar_Alumno_Legajo() };
-            ////miLista.Add();
-            //for (int L = 0; L < 20; L++)
-            //{
-            //    Random aleatorio = new Random();
-                
-            //    IComparableP compA = new Alumno(Nombre_al_azar(), aleatorio.Next(10000000, 99999999), aleatorio.Next(100, 99999), aleatorio.Next(1, 10));
-            //    coleccionable.Agregar(compA);
+            for (int L = 0; L < 20; L++)
+            {
+                Random aleatorio = new Random();
 
+                IComparableP compA = new Alumno(Nombre_al_azar(), aleatorio.Next(10000000, 99999999), aleatorio.Next(100, 99999), aleatorio.Next(1, 10));
+                coleccionable.Agregar(compA);
+            }
 
-            //}
-       
         }
         //public static void Aplicando_Estrategia_Comparar_Alumno_Ejercicio2_practica2() {
         //    //Ejercicio 2 Practica 2
         //    Random aleatorio = new Random();
         //    List<IEstrategia_Comparar_Alumno> Lista_Estrategia_Comparar_Alumno = new List<IEstrategia_Comparar_Alumno>() { new Comparar_Alumno_Nombre(), new Comparar_Alumno_Dni(), new Comparar_Alumno_Promedio(), new Comparar_Alumno_Legajo() };
-            
+
         //    IEstrategia_Comparar_Alumno estrategia = Lista_Estrategia_Comparar_Alumno[aleatorio.Next(4)];
         //    Alumno alumno_A = new Alumno();
         //    alumno_A.Estrategia_elegida = estrategia;
         //}
-
-
     }
 }

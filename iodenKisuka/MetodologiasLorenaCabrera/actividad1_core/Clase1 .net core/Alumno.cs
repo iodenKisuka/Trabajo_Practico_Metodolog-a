@@ -46,15 +46,7 @@ namespace Clase1_.net_core
         //delegar las acciones
         public void Comparar_Alumnos(string tipo_de_dato)
         {
-            try
-            {
-                int numero = int.Parse(tipo_de_dato);
-                Estrategia_elegida.Comparar_Alumno(numero);
-            }
-            catch (InvalidCastException)
-            {
-               Estrategia_elegida.Comparar_Alumno(tipo_de_dato);
-            }
+            //return this.Estrategia_elegida.SosIgual(this, comparable);
 
 
         }

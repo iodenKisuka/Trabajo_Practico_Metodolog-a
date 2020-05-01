@@ -4,17 +4,30 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    class Comparar_Alumno_Nombre : IEstrategia_Comparar_Alumno
+    class Comparar_Alumno_GetNombre : IEstrategia_Comparar_Alumno
     {
-        
-        public void Comparar_Alumno(int dato_generico)
+        public bool SosIgual(IComparable IComparable, IComparable IComparable2)
         {
-            throw new NotImplementedException();
+            if (((Alumno)IComparable).GetNombre.CompareTo(((Alumno)IComparable2).GetNombre) == 1)
+                return true;
+            else
+                return false;
         }
 
-        public void Comparar_Alumno(string dato_generico)
+        public bool SosMayor(IComparable IComparable, IComparable IComparable2)
         {
-            throw new NotImplementedException();
+            if (((Alumno)IComparable2).GetNombre.CompareTo(((Alumno)IComparable).GetNombre) < 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool SosMenor(IComparable IComparable, IComparable IComparable2)
+        {
+            if (((Alumno)IComparable2).GetNombre.CompareTo(((Alumno)IComparable).GetNombre) > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
