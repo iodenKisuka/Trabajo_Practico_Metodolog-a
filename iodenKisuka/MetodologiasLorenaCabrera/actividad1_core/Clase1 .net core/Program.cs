@@ -52,7 +52,6 @@ namespace Clase1_.net_core
             //LlenarAlumnos(multiple3.cola_coleccion);
             //Informar(multiple3);
 
-
             // Console.WriteLine("Hello World!");
 
         }
