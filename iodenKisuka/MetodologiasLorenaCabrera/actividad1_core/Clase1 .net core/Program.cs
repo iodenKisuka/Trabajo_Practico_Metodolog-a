@@ -8,6 +8,7 @@ namespace Clase1_.net_core
     {
         static void Main(string[] args)
         {
+
             ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
             // estrategiaalimno.SosIgual();
             /** //Ejercicio 7
