@@ -9,7 +9,7 @@ namespace Clase1_.net_core
         static void Main(string[] args)
         {
 
-            ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
+            ////  ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
             // estrategiaalimno.SosIgual();
             /** //Ejercicio 7
              Console.WriteLine("iniciando programa");
@@ -53,6 +53,8 @@ namespace Clase1_.net_core
             //Informar(multiple3);
 
             // Console.WriteLine("Hello World!");
+
+            
 
         }
 

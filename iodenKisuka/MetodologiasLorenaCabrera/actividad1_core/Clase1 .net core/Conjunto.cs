@@ -8,35 +8,104 @@ namespace Clase1_.net_core
 {
     class Conjunto : IColeccionableTP
     {
-        ArrayList Lista_conjunto = new ArrayList();
-        
-        public void Agregar(Object elemento) { }
+        // HashSet<IComparableP> Lista_conjunto= new HashSet<IComparableP> ();
+        List<IComparableP> Listacomparable = new List<IComparableP>();
 
         public void Agregar(IComparableP objeto)
         {
-            throw new NotImplementedException();
+            bool HayUnoigual = true;
+            if (Listacomparable.Count > 0)
+            {
+
+                foreach (IComparableP num in Listacomparable)
+                {
+
+                    if (objeto.GetType() == num.GetType())
+                    {
+                        if (num.SosIgual(objeto))
+                        {
+                            HayUnoigual = false;
+                        }
+                    }
+                }
+
+                if (HayUnoigual)
+                {
+                    Listacomparable.Add(objeto);
+                }
+            }
+            else
+            {
+                Listacomparable.Add(objeto);
+            }
         }
 
         public bool Contiene(IComparableP objeto)
         {
-            throw new NotImplementedException();
+            bool esta = false;
+            foreach (IComparableP num in Listacomparable)
+            {
+
+                if (objeto.GetType() == num.GetType())
+                {
+                    if (num.SosIgual(objeto))
+                    {
+                        esta = true;
+                    }
+                }
+            }
+            return esta;
         }
 
         public int Cuantos()
         {
-            throw new NotImplementedException();
+            return Listacomparable.Count;
         }
 
         public IComparableP Maximo()
         {
-            throw new NotImplementedException();
+            int contador = 1;
+            IComparableP primer_tipo_mayor = Listacomparable[1];
+            while (contador<Listacomparable.Count)
+            {
+                IComparableP valor_que_cambia= Listacomparable[contador];
+               
+                if (valor_que_cambia.GetType() == primer_tipo_mayor.GetType())
+                {
+                    if (valor_que_cambia.SosMayor(primer_tipo_mayor))
+                    {
+                        primer_tipo_mayor = valor_que_cambia;
+                    }
+                }
+
+                contador++;
+            }
+            Console.WriteLine("Tomamos el primer tipo de dato ingresado para seleccionar sobre ese tipo cual es el mayor");
+            Console.WriteLine("El tipo de dato comparado es " + (primer_tipo_mayor.GetType()));
+            return primer_tipo_mayor;
         }
 
         public IComparableP Minimo()
         {
-            throw new NotImplementedException();
-        }
+            int contador = 1;
+            IComparableP primer_tipo_menor = Listacomparable[1];
+            while (contador < Listacomparable.Count)
+            {
+                IComparableP valor_que_cambia = Listacomparable[contador];
 
-        public bool Pertenece(object elemento) { return false; }
+                if (valor_que_cambia.GetType() == primer_tipo_menor.GetType())
+                {
+                    if (valor_que_cambia.SosMenor(primer_tipo_menor))
+                    {
+                        primer_tipo_menor = valor_que_cambia;
+                    }
+                }
+
+                contador++;
+            }
+            Console.WriteLine("Tomamos el primer tipo de dato ingresado para seleccionar sobre ese tipo cual es el menor");
+            Console.WriteLine("El tipo de dato comparado es "+ primer_tipo_menor.GetType());
+            return primer_tipo_menor;
+        }
     }
 }

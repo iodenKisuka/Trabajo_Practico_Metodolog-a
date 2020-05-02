@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    class Diccionario: IColeccionableTP, ITERABLE { 
+    class Diccionario <K,T>: IColeccionableTP, ITERABLE { 
     
-        Dictionary<int ,string> diccionario;
+        Dictionary<K ,T> diccionario;
 
         public ITERABLE actual()
         {
