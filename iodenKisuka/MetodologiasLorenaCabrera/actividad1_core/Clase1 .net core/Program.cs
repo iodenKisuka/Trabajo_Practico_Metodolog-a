@@ -53,8 +53,50 @@ namespace Clase1_.net_core
             //Informar(multiple3);
 
             // Console.WriteLine("Hello World!");
+            Numero num1 = new Numero(1);
+            Numero num2 = new Numero(2);
+            Persona persona = new Persona("nombre1",1234);
+            Numero num3 = new Numero(3);
+            Persona persona2 = new Persona("nombre2", 12345);
+            IComparableP num1repetido = new Numero(1);
+            IComparableP persona1repetido = new Persona("nombre1", 1234);
+            Conjunto nuevo_conjunto = new Conjunto();
+            nuevo_conjunto.Agregar(persona);
+            nuevo_conjunto.Agregar(num1);
+            nuevo_conjunto.Agregar(persona2);
 
-            
+            nuevo_conjunto.Agregar(persona1repetido); nuevo_conjunto.Agregar(persona1repetido);
+            nuevo_conjunto.Agregar(persona1repetido);
+            nuevo_conjunto.Agregar(persona1repetido);
+            nuevo_conjunto.Agregar(num2);
+            nuevo_conjunto.Agregar(num3);
+            nuevo_conjunto.Agregar(num1repetido);
+            foreach (IComparableP elemento in nuevo_conjunto.Listacomparable)
+            {
+                Console.WriteLine(elemento);
+            }
+            Diccionario nuevoDiccinario = new Diccionario();
+            Clave_Valor clave = new Clave_Valor(persona1repetido,persona1repetido);
+            Clave_Valor clave1_repetido = new Clave_Valor(persona1repetido, persona);
+            Clave_Valor clave2 = new Clave_Valor(persona1repetido, num1);
+            nuevoDiccinario.Agregar(clave);
+            nuevoDiccinario.Agregar(clave);
+            nuevoDiccinario.Agregar(clave1_repetido);
+            nuevoDiccinario.Agregar(clave2);
+
+            Clave_Valor clave_repetido = new Clave_Valor(num1repetido, persona);
+            Console.WriteLine( nuevoDiccinario.valorDe(clave_repetido));
+            Console.WriteLine(nuevoDiccinario.valorDe(clave));
+
+            foreach (KeyValuePair<IComparableP, object> result in nuevoDiccinario.diccionario)
+            {
+                Console.WriteLine(string.Format("Key-{0}:Value-{1}", result.Key, result.Value));
+            }
+            foreach (var economica in nuevoDiccinario.diccionario)
+            {
+                Console.WriteLine("{0} : {1}", economica.Key, economica.Value);
+            }
+
 
         }
 

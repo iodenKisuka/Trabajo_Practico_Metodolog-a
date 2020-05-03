@@ -9,28 +9,13 @@ namespace Clase1_.net_core
     class Conjunto : IColeccionableTP
     {
         // HashSet<IComparableP> Lista_conjunto= new HashSet<IComparableP> ();
-        List<IComparableP> Listacomparable = new List<IComparableP>();
+       public List<IComparableP> Listacomparable = new List<IComparableP>();
 
         public void Agregar(IComparableP objeto)
         {
-            bool HayUnoigual = true;
             if (Listacomparable.Count > 0)
             {
-
-                foreach (IComparableP num in Listacomparable)
-                {
-
-                    if (objeto.GetType() == num.GetType())
-                    {
-                        if (num.SosIgual(objeto))
-                        {
-                            HayUnoigual = false;
-                        }
-                    }
-                }
-
-                if (HayUnoigual)
-                {
+                if (!Contiene(objeto)) {
                     Listacomparable.Add(objeto);
                 }
             }
