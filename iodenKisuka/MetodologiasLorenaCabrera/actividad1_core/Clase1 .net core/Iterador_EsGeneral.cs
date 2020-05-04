@@ -9,7 +9,7 @@ namespace Clase1_.net_core
         
         void siguiente();
         bool fin();
-        object actual();
+        IComparableP actual();
 
 
     }

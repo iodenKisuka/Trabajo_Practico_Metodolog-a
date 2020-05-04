@@ -6,19 +6,28 @@ namespace Clase1_.net_core
 {
     class Comparar_Alumno_Legajo : IEstrategia_Comparar_Alumno
     {
-        public bool SosIgual(IComparable comparable, IComparable comparable2)
+        public bool SosIgual(IComparableP comparable, IComparableP comparable2)
         {
-            throw new NotImplementedException();
+            if (((Alumno)comparable).GetLegajo== ((Alumno)comparable2).GetLegajo)
+                return true;
+            else
+                return false;
         }
 
-        public bool SosMayor(IComparable comparable, IComparable comparable2)
+        public bool SosMayor(IComparableP comparable, IComparableP comparable2)
         {
-            throw new NotImplementedException();
+            if (((Alumno)comparable).GetLegajo > ((Alumno)comparable2).GetLegajo)
+                return true;
+            else
+                return false;
         }
 
-        public bool SosMenor(IComparable comparable, IComparable comparable2)
+        public bool SosMenor(IComparableP comparable, IComparableP comparable2)
         {
-            throw new NotImplementedException();
+            if (((Alumno)comparable).GetLegajo < ((Alumno)comparable2).GetLegajo)
+                return true;
+            else
+                return false;
         }
     }
 }

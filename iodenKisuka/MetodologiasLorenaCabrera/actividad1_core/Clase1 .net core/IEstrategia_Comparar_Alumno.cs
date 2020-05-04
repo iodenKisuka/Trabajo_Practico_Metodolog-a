@@ -10,9 +10,9 @@ namespace Clase1_.net_core
                 //y string o int no son objetos
                void Comparar_Alumno(int dato);
                void Comparar_Alumno(string dato);   **/
-        public bool SosIgual(IComparable comparable, IComparable comparable2);
-        public bool SosMenor(IComparable comparable, IComparable comparable2);
-        public bool SosMayor(IComparable comparable, IComparable comparable2);
+        public bool SosIgual(IComparableP comparable, IComparableP comparable2);
+        public bool SosMenor(IComparableP comparable, IComparableP comparable2);
+        public bool SosMayor(IComparableP comparable, IComparableP comparable2);
 
     }
 }

@@ -15,11 +15,11 @@ namespace Clase1_.net_core
             this.posicion = 0;
         }
 
-        public object actual()
+        public IComparableP actual()
         { 
             int contador = 0;
-            object objetoActual= null;
-            foreach (object donde_estoy in diccionario)
+            IComparableP objetoActual = null;
+            foreach (IComparableP donde_estoy in diccionario.Keys)
             {
                 if (contador == posicion)
                 {

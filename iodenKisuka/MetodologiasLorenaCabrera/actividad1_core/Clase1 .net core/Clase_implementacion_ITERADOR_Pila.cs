@@ -15,7 +15,7 @@ namespace Clase1_.net_core
             this.posicion = 0;
         }
 
-        public object actual()
+        public IComparableP actual()
         {
            return pilas.Pop();
         }

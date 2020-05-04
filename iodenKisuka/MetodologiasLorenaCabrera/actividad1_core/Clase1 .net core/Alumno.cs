@@ -44,10 +44,12 @@ namespace Clase1_.net_core
        public IEstrategia_Comparar_Alumno Estrategia_elegida{ get; set; }
         
         //delegar las acciones
-        public void Comparar_Alumnos(string tipo_de_dato)
+        public void Comparar_Alumnos()
         {
             //return this.Estrategia_elegida.SosIgual(this, comparable);
-
+            //este contextAlumnoStrategia lo hice yo 
+          ContextAlumnoStegy estrategia = new ContextAlumnoStegy(Estrategia_elegida);
+          
 
         }
 

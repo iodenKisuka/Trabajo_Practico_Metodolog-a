@@ -7,8 +7,8 @@ namespace Clase1_.net_core
     {
         static void Main(string[] args)
         {
-
-            ////  ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
+            
+            //  ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
             // estrategiaalimno.SosIgual();
             /** //Ejercicio 7
              Console.WriteLine("iniciando programa");
@@ -51,76 +51,40 @@ namespace Clase1_.net_core
             //LlenarAlumnos(multiple3.cola_coleccion);
             //Informar(multiple3);
 
-            
+
 
 
 
             // Console.WriteLine("Hello World!");
-            Numero num1 = new Numero(1);
-            Numero num2 = new Numero(2);
-            Persona persona = new Persona("nombre1",1234);
-            Numero num3 = new Numero(3);
-            Persona persona2 = new Persona("nombre2", 12345);
-            IComparableP num1repetido = new Numero(1);
-            IComparableP persona1repetido = new Persona("nombre1", 1234);
-            Conjunto nuevo_conjunto = new Conjunto();
-            nuevo_conjunto.Agregar(persona);
-            nuevo_conjunto.Agregar(num1);
-            nuevo_conjunto.Agregar(persona2);
 
-            nuevo_conjunto.Agregar(persona1repetido); nuevo_conjunto.Agregar(persona1repetido);
-            nuevo_conjunto.Agregar(persona1repetido);
-            nuevo_conjunto.Agregar(persona1repetido);
-            nuevo_conjunto.Agregar(num2);
-            nuevo_conjunto.Agregar(num3);
-            nuevo_conjunto.Agregar(num1repetido);
-            foreach (IComparableP elemento in nuevo_conjunto.Listacomparable)
-            {
-                Console.WriteLine(elemento);
-            }
-            Diccionario nuevoDiccinario = new Diccionario();
-            Clave_Valor clave = new Clave_Valor(persona1repetido,persona1repetido);
-            Clave_Valor clave1_repetido = new Clave_Valor(persona1repetido, persona);
-            Clave_Valor clave2 = new Clave_Valor(persona1repetido, num1);
-            nuevoDiccinario.Agregar(clave);
-            nuevoDiccinario.Agregar(clave);
-            nuevoDiccinario.Agregar(clave1_repetido);
-            nuevoDiccinario.Agregar(clave2);
+            /** //ejercicio 8 practica 2
+             Console.WriteLine("Usando el patron interator");
+             IColeccionableTP pila5 = new Pila();
+             IColeccionableTP cola5 = new Cola();
+             IColeccionableTP conjunto1 = new Conjunto();
+             IColeccionableTP diccinario1 = new Diccionario();
+             
+             LlenarAlumnos(pila5);
+             LlenarAlumnos(cola5);
+             LlenarAlumnos(conjunto1);
+             LlenarAlumnos(diccinario1);
+             Console.WriteLine("Usando pila");
+             ImprimirElementos(pila5);
+             Console.WriteLine("Usando cola");
+             ImprimirElementos(cola5);
+             Console.WriteLine("Usando conjunto");
+             ImprimirElementos(conjunto1);
+             Console.WriteLine("Usando diccionario");
+             ImprimirElementos(diccinario1);
+             **/
 
-            Clave_Valor clave_repetido = new Clave_Valor(num1repetido, persona);
-            Console.WriteLine( nuevoDiccinario.valorDe(clave_repetido));
-            Console.WriteLine(nuevoDiccinario.valorDe(clave));
-
-            foreach (KeyValuePair<IComparableP, object> result in nuevoDiccinario.diccionario)
-            {
-                Console.WriteLine(string.Format("Key-{0}:Value-{1}", result.Key, result.Value));
-            }
-            foreach (var economica in nuevoDiccinario.diccionario)
-            {
-                Console.WriteLine("{0} : {1}", economica.Key, economica.Value);
-            }
-
-            //ejercicio 8 practica 2
-            Console.WriteLine("Usando el patron interator");
-            IColeccionableTP pila5 = new Pila();
-            IColeccionableTP cola5 = new Cola();
-            IColeccionableTP conjunto1 = new Conjunto();
-            IColeccionableTP diccinario1 = new Diccionario();
-            
-            LlenarAlumnos(pila5);
-            LlenarAlumnos(cola5);
-            LlenarAlumnos(conjunto1);
-            LlenarAlumnos(diccinario1);
-            Console.WriteLine("Usando pila");
-            ImprimirElementos(pila5);
-            Console.WriteLine("Usando cola");
-            ImprimirElementos(cola5);
-            Console.WriteLine("Usando conjunto");
-            ImprimirElementos(conjunto1);
-            Console.WriteLine("Usando diccionario");
-            ImprimirElementos(diccinario1);
-
-
+            //Ejercicio 10
+            IColeccionableTP pila6 = new Pila();
+            LlenarAlumnos(pila6);
+            ImprimirElementos(pila6);
+            //CambiarEstrategia(pila6, new Comparar_Alumno_GetNombre());
+            CambiarEstrategia(pila6, new Comparar_Alumno_Dni());
+            Informar(pila6);
         }
 
         //EJERCICIO  5
@@ -264,6 +228,30 @@ namespace Clase1_.net_core
                 //si no agregara siguiente seria un bucle infinito
                 Console.WriteLine(elemento);
             }
+        }
+
+
+        //Ejercicio 9 Practica 2
+        public static void CambiarEstrategia(IColeccionableTP coleccionable,IEstrategia_Comparar_Alumno estrategia)
+        {
+            Interador interador = coleccionable.iterador();
+           // while (!interador.fin())
+           // {
+                IComparableP elemento = interador.actual();
+                interador.siguiente();
+
+                ((Alumno)elemento).Estrategia_elegida = estrategia;
+
+                ((Alumno)elemento).Comparar_Alumnos();
+
+                IComparableP alumnoSiguiente = (Alumno)interador.actual();
+                //si no agregara siguiente seria un bucle infinito
+                //IEstrategia_Comparar_Alumno cambiandoestrategia = new ContextAlumnoStegy(estrategia);
+                ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
+            Console.WriteLine("el alumno " + elemento + " es el MISMO que " + alumnoSiguiente + " = " + "\n "+ estrategiaalimno.SosIgual(elemento, alumnoSiguiente));
+                Console.WriteLine("el alumno " + elemento + " es MENOR que " + alumnoSiguiente + " = " + "\n " + estrategiaalimno.SosMenor(elemento, alumnoSiguiente));
+                Console.WriteLine("el alumno " + elemento + " es MAYOR que " + alumnoSiguiente + " = " + "\n " + estrategiaalimno.SosMayor(elemento, alumnoSiguiente));
+           // }
         }
 
     }

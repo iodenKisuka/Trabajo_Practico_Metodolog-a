@@ -6,7 +6,7 @@ namespace Clase1_.net_core
 {
     class Comparar_Alumno_Dni : IEstrategia_Comparar_Alumno
     {
-        public bool SosIgual(IComparable comparable, IComparable comparable2)
+        public bool SosIgual(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable).GetDni == ((Alumno)comparable2).GetDni)
                 return true;
@@ -14,15 +14,16 @@ namespace Clase1_.net_core
                 return false;
         }
 
-        public bool SosMayor(IComparable comparable, IComparable comparable2)
+        public bool SosMayor(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable2).GetDni < ((Alumno)comparable).GetDni)
                 return true;
             else
+                Console.WriteLine(((Alumno)comparable2).GetDni+" compare "+((Alumno)comparable).GetDni);
                 return false;
         }
 
-        public bool SosMenor(IComparable comparable, IComparable comparable2)
+        public bool SosMenor(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable2).GetDni > ((Alumno)comparable).GetDni)
                 return true;

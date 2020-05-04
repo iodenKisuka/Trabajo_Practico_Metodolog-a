@@ -6,7 +6,7 @@ namespace Clase1_.net_core
 {
     class Comparar_Alumno_Promedio : IEstrategia_Comparar_Alumno
     {
-        public bool SosIgual(IComparable comparable, IComparable comparable2)
+        public bool SosIgual(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable2).GetPromedio == ((Alumno)comparable).GetPromedio)
                 return true;
@@ -14,7 +14,7 @@ namespace Clase1_.net_core
                 return false;
         }
 
-        public bool SosMayor(IComparable comparable, IComparable comparable2)
+        public bool SosMayor(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable2).GetPromedio > ((Alumno)comparable).GetPromedio)
                 return true;
@@ -22,7 +22,7 @@ namespace Clase1_.net_core
                 return false;
         }
 
-        public bool SosMenor(IComparable comparable, IComparable comparable2)
+        public bool SosMenor(IComparableP comparable, IComparableP comparable2)
         {
             if (((Alumno)comparable2).GetPromedio < ((Alumno)comparable).GetPromedio)
                 return true;

@@ -15,7 +15,7 @@ namespace Clase1_.net_core
             posicion = 0;
         }
 
-        public object actual()
+        public IComparableP actual()
         {
             return conjunto[posicion];
         }
