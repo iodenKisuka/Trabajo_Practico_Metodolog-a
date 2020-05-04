@@ -122,5 +122,12 @@ namespace Clase1_.net_core
             return ((IComparableP)primer_tipo_mayor);
 
         }
+
+
+        public Interador iterador()
+        {
+            return new Clase_implementacion_ITERADOR_Diccionario(diccionario);
+        }
+
     }
 }

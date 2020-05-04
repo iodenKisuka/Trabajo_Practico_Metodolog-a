@@ -47,6 +47,11 @@ namespace Clase1_.net_core
             return Listacomparable.Count;
         }
 
+        public Interador iterador()
+        {
+            throw new NotImplementedException();
+        }
+
         public IComparableP Maximo()
         {
             int contador = 1;

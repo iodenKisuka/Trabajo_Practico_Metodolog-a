@@ -12,6 +12,7 @@ namespace Clase1_.net_core
         void Agregar(IComparableP objeto);
         bool Contiene(IComparableP objeto);
 
+        public Interador iterador();
 
 
     }

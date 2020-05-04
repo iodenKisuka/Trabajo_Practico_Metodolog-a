@@ -39,6 +39,8 @@ namespace Clase1_.net_core
             return pila_colecion.Cuantos()+cola_coleccion.Cuantos();
         }
 
+       
+
         public IComparableP Maximo()
         {
            IComparableP maximo_pila =pila_colecion.Maximo();
@@ -60,6 +62,10 @@ namespace Clase1_.net_core
             else { return minimo_pila; }
         }
 
+        public Interador iterador()
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }

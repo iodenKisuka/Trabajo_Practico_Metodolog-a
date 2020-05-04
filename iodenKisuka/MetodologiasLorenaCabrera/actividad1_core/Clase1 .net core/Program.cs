@@ -98,6 +98,9 @@ namespace Clase1_.net_core
             }
 
 
+            Console.WriteLine("Usando el patron interator");
+            ImprimirElementos(nuevoDiccinario);
+
         }
 
         //EJERCICIO  5
@@ -226,5 +229,22 @@ namespace Clase1_.net_core
         //    Alumno alumno_A = new Alumno();
         //    alumno_A.Estrategia_elegida = estrategia;
         //}
+
+
+
+        //Ejercicio 7 Practica 2
+        public static void  ImprimirElementos(IColeccionableTP coleccionable)
+        {
+            Interador interador = coleccionable.iterador();
+
+            while(!interador.fin())
+            {
+                object elemento = interador.actual();
+                interador.siguiente();
+                //si no agregara siguiente seria un bucle infinito
+                Console.WriteLine(elemento);
+            }
+        }
+
     }
 }

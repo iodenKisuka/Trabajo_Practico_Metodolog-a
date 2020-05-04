@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    interface ITERABLE
-    {
-        void primero(); 
+   public interface Interador
+    {   //es la interfaz que tiene todos los metodos que se utilizan para recorrer  
+        
         void siguiente();
         bool fin();
-        ITERABLE actual();
+        object actual();
 
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clase1_.net_core
 {
-    class Pila:IColeccionableTP, ITERABLE
+    class Pila : IColeccionableTP
     {
         Stack<IComparableP> pilas= new Stack<IComparableP>();
 
@@ -103,25 +103,11 @@ namespace Clase1_.net_core
             return pila_clon;
         }
 
-        public void primero()
+        public Interador iterador()
         {
-            throw new NotImplementedException();
+            return new Clase_implementacion_ITERADOR_Pila(pilas);
         }
 
-        public void siguiente()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool fin()
-        {
-            throw new NotImplementedException();
-        }
-
-        public ITERABLE actual()
-        {
-            throw new NotImplementedException();
-        }
 
         //EJERCICIO 6
         /** public void Informar(IColeccionableTP coleccionable)
