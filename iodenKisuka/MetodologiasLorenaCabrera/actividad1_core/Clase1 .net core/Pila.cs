@@ -105,7 +105,7 @@ namespace Clase1_.net_core
 
         public Interador iterador()
         {
-            return new Clase_implementacion_ITERADOR_Pila(pilas);
+            return new Clase_implementacion_ITERADOR_Pila(Clonar());
         }
 
 

@@ -47,10 +47,7 @@ namespace Clase1_.net_core
             return Listacomparable.Count;
         }
 
-        public Interador iterador()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public IComparableP Maximo()
         {
@@ -96,6 +93,11 @@ namespace Clase1_.net_core
             Console.WriteLine("Tomamos el primer tipo de dato ingresado para seleccionar sobre ese tipo cual es el menor");
             Console.WriteLine("El tipo de dato comparado es "+ primer_tipo_menor.GetType());
             return primer_tipo_menor;
+        }
+
+        public Interador iterador()
+        {
+           return new Clase_implementacion_ITERADOR_Conjunto(Listacomparable);
         }
     }
 }

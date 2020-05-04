@@ -91,7 +91,7 @@ namespace Clase1_.net_core
 
         public Interador iterador()
         {
-            return new Clase_implementacion_ITERADOR_Cola(colas);
+            return new Clase_implementacion_ITERADOR_Cola(Clonar());
         }
 
 

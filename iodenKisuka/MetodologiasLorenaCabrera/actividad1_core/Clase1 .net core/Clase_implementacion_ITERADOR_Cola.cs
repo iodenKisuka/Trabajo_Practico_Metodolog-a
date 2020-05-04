@@ -17,17 +17,21 @@ namespace Clase1_.net_core
 
         public object actual()
         {
-            throw new NotImplementedException();
+           return colas.Dequeue();
         }
 
         public bool fin()
         {
-            throw new NotImplementedException();
+            if (posicion < colas.Count)
+            {
+                return false;
+            }
+            else { return true; }
         }
 
         public void siguiente()
         {
-            throw new NotImplementedException();
+            posicion++;
         }
     }
 }

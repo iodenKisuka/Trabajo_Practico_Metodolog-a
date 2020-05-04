@@ -12,22 +12,26 @@ namespace Clase1_.net_core
         public Clase_implementacion_ITERADOR_Pila(Stack<IComparableP> pilas)
         {
             this.pilas = pilas;
-            posicion = 0;
+            this.posicion = 0;
         }
 
         public object actual()
         {
-            throw new NotImplementedException();
+           return pilas.Pop();
         }
 
         public bool fin()
         {
-            throw new NotImplementedException();
+            if (posicion < pilas.Count)
+            {
+                return false;
+            }
+            else { return true; }
         }
 
         public void siguiente()
         {
-            throw new NotImplementedException();
+            posicion++;
         }
     }
 }

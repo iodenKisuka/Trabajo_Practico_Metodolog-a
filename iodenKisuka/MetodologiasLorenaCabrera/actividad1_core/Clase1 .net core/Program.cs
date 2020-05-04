@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 
 namespace Clase1_.net_core
@@ -52,6 +51,10 @@ namespace Clase1_.net_core
             //LlenarAlumnos(multiple3.cola_coleccion);
             //Informar(multiple3);
 
+            
+
+
+
             // Console.WriteLine("Hello World!");
             Numero num1 = new Numero(1);
             Numero num2 = new Numero(2);
@@ -97,9 +100,26 @@ namespace Clase1_.net_core
                 Console.WriteLine("{0} : {1}", economica.Key, economica.Value);
             }
 
-
+            //ejercicio 8 practica 2
             Console.WriteLine("Usando el patron interator");
-            ImprimirElementos(nuevoDiccinario);
+            IColeccionableTP pila5 = new Pila();
+            IColeccionableTP cola5 = new Cola();
+            IColeccionableTP conjunto1 = new Conjunto();
+            IColeccionableTP diccinario1 = new Diccionario();
+            
+            LlenarAlumnos(pila5);
+            LlenarAlumnos(cola5);
+            LlenarAlumnos(conjunto1);
+            LlenarAlumnos(diccinario1);
+            Console.WriteLine("Usando pila");
+            ImprimirElementos(pila5);
+            Console.WriteLine("Usando cola");
+            ImprimirElementos(cola5);
+            Console.WriteLine("Usando conjunto");
+            ImprimirElementos(conjunto1);
+            Console.WriteLine("Usando diccionario");
+            ImprimirElementos(diccinario1);
+
 
         }
 
