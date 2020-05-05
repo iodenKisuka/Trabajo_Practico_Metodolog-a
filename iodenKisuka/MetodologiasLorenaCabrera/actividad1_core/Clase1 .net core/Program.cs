@@ -148,7 +148,7 @@ namespace Clase1_.net_core
                 try
                 {
                     IComparableP compara = new Alumno("", num, num, num);
-                    //saber_si_ando = coleccionable.Contiene(compara);
+                    saber_si_ando = coleccionable.Contiene(compara);
                     //ejercici practica 2 probando si funciona
                     //Aplicando_Estrategia_Comparar_Alumno_Ejercicio2_practica2();
 
