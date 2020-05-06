@@ -8,6 +8,9 @@ namespace Clase1_.net_core
     {
         int legajo;
         int promedio;
+        private double calificacion;
+
+        public double UltimaCalificacion { get => calificacion; set => calificacion = value; }
         public int GetLegajo
         {
             get { return legajo; }
@@ -43,6 +46,8 @@ namespace Clase1_.net_core
 
        public IEstrategia_Comparar_Alumno Estrategia_elegida{ get; set; }
         
+       
+
         //delegar las acciones
         public void Comparar_Alumnos()
         {
@@ -52,6 +57,20 @@ namespace Clase1_.net_core
           
 
         }
+
+        //Ejercicio 1 TP4
+       public virtual int responderPregunta(int pregunta)
+        {
+            Random aleatorio = new Random();
+
+            return aleatorio.Next(1,3);
+        }
+        public virtual string mostrarCalificación()
+        {
+
+            return GetNombre+" "+UltimaCalificacion;
+        }
+
 
 
     }

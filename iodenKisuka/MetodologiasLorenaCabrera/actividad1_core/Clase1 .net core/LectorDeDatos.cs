@@ -6,13 +6,13 @@ namespace Clase1_.net_core
 {
     class LectorDeDatos
     {
-        public int numeroPorTeclado()
+        public static int numeroPorTeclado()
         {
             Console.WriteLine("Ingrese un numero");
             int num = int.Parse(Console.ReadLine());
             return num;  
         }
-        public string stringPorTeclado()
+        public static string stringPorTeclado()
         {
             Console.WriteLine("Ingrese texto");
             string textoingresado=Console.ReadLine();

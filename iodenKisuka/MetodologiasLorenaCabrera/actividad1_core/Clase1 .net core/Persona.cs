@@ -27,7 +27,7 @@ namespace Clase1_.net_core
             set { dni = value; }
         }
 
-        public bool SosIgual(IComparableP variable)
+        public virtual bool SosIgual(IComparableP variable)
         {
             
             if (((Persona)variable).dni == this.dni && ((Persona)variable).nombre == this.nombre)
