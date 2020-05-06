@@ -12,4 +12,8 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Patron observer\" />
+  </ItemGroup>
+
 </Project>

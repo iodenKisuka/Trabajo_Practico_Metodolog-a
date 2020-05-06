@@ -8,8 +8,8 @@ namespace Clase1_.net_core
 {
     class Persona : IComparableP
     {
-        string nombre;
-        int dni;
+       protected string nombre;
+       protected int dni;
         public Persona(string n, int d)
         {
             this.nombre = n;

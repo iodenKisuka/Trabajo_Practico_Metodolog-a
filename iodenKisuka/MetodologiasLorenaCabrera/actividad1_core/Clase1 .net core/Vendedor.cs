@@ -7,7 +7,7 @@ namespace Clase1_.net_core
     class Vendedor: Persona
     {
         double sueldoBasico;
-        double bonus;
+        public  double bonus;
 
         public Vendedor(string n, int d, double sueldoBasico, double bonus) : base(n, d)
         {
@@ -23,6 +23,33 @@ namespace Clase1_.net_core
         {
             bonus = bonus + 0.1;
         }
+
+        public override bool SosIgual(IComparableP variable)
+        {
+
+            if (((Vendedor)variable).bonus == this.bonus)
+                return true;
+            else
+                return false;
+
+        }
+
+        public override bool SosMayor(IComparableP variable)
+        {
+            return this.bonus < ((Vendedor)variable).bonus;
+        }
+
+        public override bool SosMenor(IComparableP variable)
+        {
+            return this.bonus > ((Vendedor)variable).bonus;
+        }
+
+
+        public override string ToString()
+        {
+            return "nombre " + base.nombre + " dni " + base.dni;
+        }
+
 
     }
 }

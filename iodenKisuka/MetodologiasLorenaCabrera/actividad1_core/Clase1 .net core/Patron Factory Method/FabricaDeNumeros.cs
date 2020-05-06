@@ -7,11 +7,9 @@ namespace Clase1_.net_core
     class FabricaDeNumeros
     {
         IComparableP numero;
-        public IComparableP CrearNumeroAlAzar()
+        public IComparableP CrearNumeroAlAzar(int maximo)
         {
-            Random rnd = new Random();
-            int valor_elegido_al_azar = rnd.Next(0, 100);
-            numero = new Numero(valor_elegido_al_azar);
+            numero = new Numero(GeneradorDeDatosAleatorios.numeroAleatorio(maximo));
             return numero;
       }
 

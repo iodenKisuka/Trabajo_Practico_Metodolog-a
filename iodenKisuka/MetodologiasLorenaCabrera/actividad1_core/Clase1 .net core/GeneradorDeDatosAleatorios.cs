@@ -6,13 +6,13 @@ namespace Clase1_.net_core
 {
     class GeneradorDeDatosAleatorios
     {
-        Random aleatorio = new Random();
-        public int numeroAleatorio( int max)
+        static Random aleatorio = new Random();
+        public static int numeroAleatorio( int max)
         {
             return aleatorio.Next(0, max);
         }
 
-        public string stringAleatorio(int cant) {
+        public static string stringAleatorio(int cant) {
 
             string Textoaleatorio="";
             string listaLetras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
