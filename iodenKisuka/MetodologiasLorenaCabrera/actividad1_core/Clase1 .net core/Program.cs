@@ -260,12 +260,15 @@ namespace Clase1_.net_core
                 ((Alumno)elemento).Comparar_Alumnos();
 
                 IComparableP alumnoSiguiente = (Alumno)interador.actual();
+
                 //si no agregara siguiente seria un bucle infinito
                 //IEstrategia_Comparar_Alumno cambiandoestrategia = new ContextAlumnoStegy(estrategia);
                 ContextAlumnoStegy estrategiaalimno = new ContextAlumnoStegy(new Comparar_Alumno_Dni());
-                Console.WriteLine("el alumno " + elemento + " es el MISMO que " + alumnoSiguiente + " = " + "\n "+ estrategiaalimno.SosIgual(elemento, alumnoSiguiente));
+
+                Console.WriteLine("el alumno " + elemento + " es el MISMO que " + alumnoSiguiente + " = " + "\n " + estrategiaalimno.SosIgual(elemento, alumnoSiguiente));
                 Console.WriteLine("el alumno " + elemento + " es MENOR que " + alumnoSiguiente + " = " + "\n " + estrategiaalimno.SosMenor(elemento, alumnoSiguiente));
                 Console.WriteLine("el alumno " + elemento + " es MAYOR que " + alumnoSiguiente + " = " + "\n " + estrategiaalimno.SosMayor(elemento, alumnoSiguiente));
+                
             }
         }
         // Ejercicio 6 TP 3
