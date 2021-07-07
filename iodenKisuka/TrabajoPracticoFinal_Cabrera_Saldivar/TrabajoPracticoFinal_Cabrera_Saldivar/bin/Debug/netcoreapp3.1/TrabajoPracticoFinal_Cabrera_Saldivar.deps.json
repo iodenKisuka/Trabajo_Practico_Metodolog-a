@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "TrabajoPracticoFinal_Cabrera_Saldivar/1.0.0": {
+        "runtime": {
+          "TrabajoPracticoFinal_Cabrera_Saldivar.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TrabajoPracticoFinal_Cabrera_Saldivar/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

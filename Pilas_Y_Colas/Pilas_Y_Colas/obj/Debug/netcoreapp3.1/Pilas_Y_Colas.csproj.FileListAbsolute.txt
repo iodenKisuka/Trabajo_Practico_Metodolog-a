@@ -1,0 +1,13 @@
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.exe
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.deps.json
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.runtimeconfig.json
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.runtimeconfig.dev.json
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.dll
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\bin\Debug\netcoreapp3.1\Pilas_Y_Colas.pdb
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.csprojAssemblyReference.cache
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.csproj.CoreCompileInputs.cache
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.AssemblyInfoInputs.cache
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.AssemblyInfo.cs
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.dll
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.pdb
+C:\Users\Lorena\source\repos\Pilas_Y_Colas\Pilas_Y_Colas\obj\Debug\netcoreapp3.1\Pilas_Y_Colas.genruntimeconfig.cache
